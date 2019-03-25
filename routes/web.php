@@ -11,17 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-})->name('home');
+Route::get('/', 'PageController@index')->name('index');
 
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
+Route::get('/about', 'PageController@about')->name('about');
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
+Route::get('/contact', 'PageController@contact')->name('contact');
+
+Route::post('/contact', 'PageController@store')->name('contact.store');
 
 /*
 Route::post('/contact', function () {
