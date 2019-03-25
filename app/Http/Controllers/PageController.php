@@ -25,12 +25,10 @@ class PageController extends Controller
     {
         $name = $request->name;
 
-        echo $name;
-
-        //return redirect()->route('thanks',['name' => $name]);
+        return redirect()->route('thanks', ['name' => $name]);
     }
 
-    function thanks($name)
+    function thanks($name, Request $request)
     {
         return view('pages.thankyou')->with(compact('name'));
     }

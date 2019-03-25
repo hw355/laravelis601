@@ -19,13 +19,4 @@ Route::get('/contact', 'PageController@contact')->name('contact');
 
 Route::post('/contact', 'PageController@store')->name('contact.store');
 
-/*
-Route::post('/contact', function () {
-
-    $data = request() -> all();
-
-    echo "Email:" . $data['email'] . '<br>';
-    echo "Message:" . $data['body'];
-
-});
-*/
+Route::get('/thanks/{name}', 'PageController@thanks')->name('thanks');
